@@ -68,6 +68,10 @@ class Calc:
         try:
             base1 = int(self.base1)
             base2 = int(self.base2)
+            if base1 or base2 >= 36:
+                return '#Ошибка ввода!'
+            if base1 or base2 <= 0:
+                return '#Ошибка ввода!'
             operand1_10 = int(self.operand1, base=base1)
             operand2_10 = int(self.operand2, base=base2)
         except ValueError:
