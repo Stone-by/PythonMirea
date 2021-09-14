@@ -30,7 +30,7 @@ class Translator:
                 return '#Ошибка ввода!'
             number = int(self.number, base=from_base)
             if number == 0:
-                return 0
+                return '0'
         except ValueError:
             return '#Ошибка ввода!'
         else:
