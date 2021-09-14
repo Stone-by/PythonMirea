@@ -31,7 +31,7 @@ class Calc(builtins.object)
 
 Пример данных для ввода: (number: '11', from_base: '2', to_base: '10')
 Пример неверных данных для ввода: (number: AF2, from_base: '999', to_base: '10.2')
-Исключительно str в int виде для чисел и str в int от 2-38 для двух СС
+Исключительно str в неотрицательном int виде для чисел и str в int от 2-38 для двух СС
 
 class Translator(builtins.object)
  |  Возвращает перевод числа из одной СС в другую
