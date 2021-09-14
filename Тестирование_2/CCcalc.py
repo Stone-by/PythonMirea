@@ -26,7 +26,7 @@ class Translator:
             to_base = int(self.to_base)
             if from_base >= 36 or to_base >= 36:
                 return '#Ошибка ввода!'
-            if from_base <= 0 or to_base <= 0:
+            if from_base <= 1 or to_base <= 1:
                 return '#Ошибка ввода!'
             number = int(self.number, base=from_base)
             if number == 0:
@@ -89,7 +89,7 @@ class Calc:
             base2 = int(self.base2)
             if base1 >= 36 or base2 >= 36:
                 return '#Ошибка ввода!'
-            if base1 <= 0 or base2 <= 0:
+            if base1 <= 1 or base2 <= 1:
                 return '#Ошибка ввода!'
             operand1_10 = int(self.operand1, base=base1)
             operand2_10 = int(self.operand2, base=base2)
