@@ -32,7 +32,18 @@ class Translator:
             if number == 0:
                 return '0'
             if number < 0:
-                return '#Ошибка ввода!'
+                number = number * (-1)
+                alphabet = string.digits + string.ascii_uppercase
+                if to_base > len(alphabet):
+                    return f'#Осн. не принадлежит [2:{len(alphabet)}]!'
+                try:
+                    result = ""
+                    while number > 0:
+                        number, mod = divmod(number, to_base)
+                        result += alphabet[mod]
+                    return '-' + result[::-1]
+                except ValueError:
+                    return '#Ошибка!'
         except ValueError:
             return '#Ошибка ввода!'
         else:
