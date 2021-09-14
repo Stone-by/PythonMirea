@@ -3,7 +3,7 @@
 
 Пример данных для ввода: (operand1: '123', base1: '10', operand2: 'AF23', base2: '16', operation: '+')
 Пример неверных данных для ввода: (operand1: '123.3', base1: '999', operand2: AF23, base2: '-23.2', operation: +)
-Исключительно str в int виде для чисел(кроме ABCDEF для 16 СС), str в int от 2-16 для СС и str(+, -, *, /) для операции
+Исключительно str в int виде для чисел(кроме ABCDEF для 16-38 СС), str в int от 2-38 для СС и str(+, -, *, /) для операции
 
 class Calc(builtins.object)
  |  Возвращает результат действия с числами в 10ой СС
@@ -31,7 +31,7 @@ class Calc(builtins.object)
 
 Пример данных для ввода: (number: '11', from_base: '2', to_base: '10')
 Пример неверных данных для ввода: (number: AF2, from_base: '999', to_base: '10.2')
-Исключительно str в int виде для чисел и str в int от 2-16 для двух СС
+Исключительно str в int виде для чисел и str в int от 2-38 для двух СС
 
 class Translator(builtins.object)
  |  Возвращает перевод числа из одной СС в другую
