@@ -24,7 +24,13 @@ class Translator:
         try:
             from_base = int(self.from_base)
             to_base = int(self.to_base)
+            if from_base >= 36 or to_base >= 36:
+                return '#Ошибка ввода!'
+            if from_base <= 0 or to_base <= 0:
+                return '#Ошибка ввода!'
             number = int(self.number, base=from_base)
+            if number == 0:
+                return 0
         except ValueError:
             return '#Ошибка ввода!'
         else:
