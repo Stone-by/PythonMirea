@@ -31,6 +31,8 @@ class Translator:
             number = int(self.number, base=from_base)
             if number == 0:
                 return '0'
+            if number < 0:
+                return '#Ошибка ввода!'
         except ValueError:
             return '#Ошибка ввода!'
         else:
